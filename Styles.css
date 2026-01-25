@@ -1,0 +1,103 @@
+body {
+    /* This code below contains the css styling for the background. */
+    background-image: url('./images/Background.png');
+    background-attachment: fixed;
+    background-size: auto 100vh;
+    background-position: center;
+    /* This is to set the font and font colour. */
+    font-family:
+        "Segoe UI",
+        "Roboto",
+        "Helvetica Neue",
+        "Arial",
+        "Tahoma",
+        "Verdana",
+        "Ubuntu",
+        "DejaVu Sans",
+        "sans-serif";
+    font-size: 22px;
+    color: #56a34d;
+    background-color: #250000;
+
+    margin-top: -1em;
+}
+h1 {
+    text-align: center;
+    font-size: 166.66%;
+}
+.emoji {
+    height:1.3em;
+    vertical-align:middle;
+}
+/* This is the reading class that makes the best reading styling for the element */
+.reading {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 0.6666em;
+    box-sizing: border-box;
+    padding-left: 1vh;
+}
+.navigation-pane {
+    margin-right: 1em;
+    padding: 10px;
+    min-width: 130px;
+    min-height: 55px;
+    background: #ff464666;
+    text-decoration:none;
+    color:inherit;
+    border-radius: 25px;
+}
+.side-nav {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    display: block;
+}
+.bottom-nav {
+    display: none;
+}
+.nav-link {
+    text-decoration:none;
+    color:inherit;
+}
+@media (max-width: 1060px) {
+    .side-nav {
+        display: none;
+    }
+
+    .bottom-nav {
+        display: block;
+        margin-top: 1em;
+    }
+}
+
+
+    .buttons {
+        margin-top: 2em;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+    /* Creates the button look */
+    .button,.button-disabled {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        width: 150px;
+        height: 75px;
+        background: #ff464666;
+        border-radius: 25px;
+        align-content: center;
+        text-align: center;
+        cursor: pointer;
+        outline-offset: -2.1px;
+        outline-width: 4px;
+        outline-color: #521515;
+        outline-style: solid;
+        border: 0px;
+    }
+    /* Creates the disabled button look */
+    .button-disabled {
+        cursor: not-allowed;
+        filter: grayscale(0.6);
+    }
