@@ -4,6 +4,7 @@ body {
     background-attachment: fixed;
     background-size: auto 100vh;
     background-position: center;
+    background-color: #250000;
     /* This is to set the font and font colour. */
     font-family:
         "Segoe UI",
@@ -17,10 +18,10 @@ body {
         "sans-serif";
     font-size: 22px;
     color: #56a34d;
-    background-color: #250000;
 
     margin-top: -1em;
 }
+/* Simple formatting */
 h1 {
     text-align: center;
     font-size: 166.66%;
@@ -29,6 +30,12 @@ h1 {
     height:1.3em;
     vertical-align:middle;
 }
+.image {
+    max-width: 100%;
+    max-height: 378px;
+    display: block;
+    padding-bottom: 0.3333em;
+}
 /* This is the reading class that makes the best reading styling for the element */
 .reading {
     max-width: 800px;
@@ -36,42 +43,44 @@ h1 {
     margin-bottom: 0.6666em;
     box-sizing: border-box;
     padding-left: 1vh;
+    list-style-position: inside;
 }
-.navigation-pane {
-    margin-right: 1em;
-    padding: 10px;
-    min-width: 130px;
-    min-height: 55px;
+/* Makes the navigation pane's background */
+.nav-pane {
     background: #ff464666;
-    text-decoration:none;
-    color:inherit;
     border-radius: 25px;
+    border: 0px;
 }
+/* Makes the navigation pane a side bar */
 .side-nav {
     position: fixed;
     left: 10px;
     top: 10px;
+    width: 231.6px;
+    height: calc(100% - 20px);
+    margin-bottom: 10px;
     display: block;
 }
 .bottom-nav {
     display: none;
 }
-.nav-link {
-    text-decoration:none;
-    color:inherit;
-}
-@media (max-width: 1060px) {
+/* Makes the navigation pane go to the bottom of the page when there isn't enough horizontal space */
+@media (max-width: 1263.2px) {
     .side-nav {
         display: none;
     }
 
     .bottom-nav {
         display: block;
+        max-width: 100%;
+        width: 800px;
+        margin: 0 auto;
+        min-height: 300px;
         margin-top: 1em;
     }
 }
 
-
+    /* Handles the placing of the buttons */
     .buttons {
         margin-top: 2em;
         display:flex;

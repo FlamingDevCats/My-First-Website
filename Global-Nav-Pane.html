@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <base target="_parent">
+        <style>
+            body {
+                margin: 0px;
+                padding: 10px;
+                text-decoration: none;
+                font-family:
+                    "Segoe UI",
+                    "Roboto",
+                    "Helvetica Neue",
+                    "Arial",
+                    "Tahoma",
+                    "Verdana",
+                    "Ubuntu",
+                    "DejaVu Sans",
+                    "sans-serif";
+                font-size: 22px;
+                color: #56a34d;
+                width: 216.6px;
+                max-width: 216.6px;
+                overflow-y: auto;
+                overflow-x: hidden;
+                box-sizing: border-box;
+            }
+            a, .child {
+                display: block;
+                text-decoration:none;
+                margin-top: 6.7px;
+                line-height: 100%;
+                color:inherit;
+                transition: ease 450ms;
+            }
+            a:hover, .child:hover {
+                transition: ease 400ms;
+                font-weight: 600;
+                color: #34a527;
+                font-size: 105%;
+            }
+            .child {
+                text-indent: 10px;
+                margin-top: 1px;
+            }
+        </style>
+    </head>
+    <body>
+        <b style="font-size:115%;"><u>Navigation Pane</u></b><br/>
+        <a href="./Home.html" >
+            Home <img src="./images/Icons & Emojis/Home-icon.svg" style="height:1em; vertical-align:-1.5px;"/>
+        </a>
+        <a href="./Home.html#requirements" class="child">
+            └─ Requirements
+        </a>
+        <a href="./Account-setup.html" >
+            Account setup
+        </a>
+        <a href="./Account-setup.html#tutorial" class="child">
+            └─ tutorial
+        </a>
+        <a href="./CRD-setup.html" >
+            Chrome Remote <br/>Desktop setup
+        </a>
+        <a href="./CRD-setup.html#tutorial" class="child">
+            └─ tutorial
+        </a>
+    </body>
+</html>
