@@ -17,23 +17,71 @@
                 </h1>
             </u>
         </b>
+        <iframe src="./Global-Nav-Pane.html" class="nav-pane side-nav"></iframe>
 		<div>
 			<p class="reading">
 				Alright so this is where we will be installing a virtual monitor. This can make 
 				it seem impossible to see your computer screen (because it is on the virtual monitor) 
-                but I will include help for fixing stuff like that at the end of the tutorial.
+                but I will include help for fixing stuff like that in another tutorial.
 			</p>
+            <p class="reading">
+                This tutorial is completely optional if you don't want to play games using 
+                Chrome Remote Desktop. This is for the case you turn off your pc screen or 
+                close the lid. If you keep your monitor on or you keep your laptop lid open, 
+                you can skip this. The reason why we need a virtual monitor is because you 
+                need a way for your gpu to actually render things while it is inactive 
+                (which happens when your monitor is off or your laptop lid is closed). 
+                If you are wondering why some things still render without a virtual monitor, 
+                it is because those are done by software rendering (rendering on the cpu). 
+            </p>
+            <ol class="reading">
+                <li>
+                    Go to the <a href="https://github.com/VirtualDrivers/Virtual-Display-Driver/releases" target="_blank" 
+                    rel="noopener noreferrer" class="hyperlink">virtual monitor releases page</a>.&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" rel="noopener noreferrer" 
+                    href="https://github.com/VirtualDrivers/Virtual-Display-Driver" class="hyperlink">
+                        (Source code)</a>
+                </li>
+                <li>
+                    Download the zip that doesn't say Driver Only and don't download the source code. In this 
+                    example, the correct zip is at the top of the Assets section. I recommend that you download 
+                    one that is in the latest release. These are marked with the green Latest tag and are usually 
+                    at the top.
+                    <img src="./images/Virtual Monitor/VDD_latest.png" class="image"/>
+                </li>
+                <li>
+                    Extract the zip to a folder. You can put this folder anywhere.
+                </li>
+                <li>
+                    Open the folder and run the executable. If you get problems like vcruntime140.dll not found,
+                    follow these steps.
+                    <ol>
+                        <li>
+                            Go to <a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170" 
+                            target="_blank" rel="noopener noreferrer" class="hyperlink">Microsoft Visual C++ Redistributable page</a>.
+                        </li>
+                        <li>
+                            Click on the latest version
+                            <img src="./images/Virtual Monitor/MS_VS_C++_redist.png" class="image"/>
+                        </li>
+                        <li>
+                            Download and run the x86 and x64 versions. When you run the files, follow the on-screen instructions. 
+                            Also, if you can't install/run the x86 version, just leave it.
+                            <img src="./images/Virtual Monitor/MS_VS_C++_redist_download.png" class="image">
+                        </li>
+                    </ol>
+                </li>
+            </ol>
 		</div>
-        <iframe src="./Global-Nav-Pane.html" class="nav-pane side-nav"></iframe>
         <iframe src="./Global-Nav-Pane.html" class="nav-pane bottom-nav"></iframe>
         <div class="reading buttons">
-            <button onclick="location.href='./CRD-setup.html'" class="button">↩ Previous</button>
-            <button onclick="location.href='./Home.html'" class="button">
+            <a href="./CRD-setup.html" class="button">↩ Previous</a>
+            <a href="./Home.html" class="button">
                 <img src="./images/Icons & Emojis/Home-icon.svg" style="height:1em; vertical-align:-1.5px;"/> 
                 Home 
                 <img src="./images/Icons & Emojis/Home-icon.svg" style="height:1em; vertical-align:-1.5px;"/>
-            </button>
-            <button onclick="location.href='https://www.example.com'" class="button">Next ↪</button>
+            </a>
+            <a href="https://www.example.com" class="button">Next ↪</a>
         </div>
     </body>
 </html>

@@ -36,13 +36,24 @@ h1 {
     display: block;
     padding-bottom: 0.3333em;
 }
+.hyperlink {
+    text-decoration: underline;
+    color: #3f700d;
+    transition: ease 450ms;
+}
+.hyperlink:hover {
+    transition: ease 400ms;
+    font-weight: 600;
+    color: #296a15;
+    font-size: 105%;
+}
 /* This is the reading class that makes the best reading styling for the element */
 .reading {
     max-width: 800px;
     margin: 0 auto;
     margin-bottom: 0.6666em;
     box-sizing: border-box;
-    padding-left: 1vh;
+    padding-left: 8px;
     list-style-position: inside;
 }
 /* Makes the navigation pane's background */
@@ -53,19 +64,20 @@ h1 {
 }
 /* Makes the navigation pane a side bar */
 .side-nav {
-    position: fixed;
+    --nav-height: calc(100vh - 20px);
+    position: sticky;
     left: 10px;
     top: 10px;
     width: 231.6px;
-    height: calc(100% - 20px);
-    margin-bottom: 10px;
+    height: var(--nav-height);
+    margin-bottom: calc(-1 * var(--nav-height));
     display: block;
 }
 .bottom-nav {
     display: none;
 }
 /* Makes the navigation pane go to the bottom of the page when there isn't enough horizontal space */
-@media (max-width: 1263.2px) {
+@media (max-width: 1263.2px) /* content width plus 2x nav width */ {
     .side-nav {
         display: none;
     }
@@ -82,6 +94,7 @@ h1 {
 
     /* Handles the placing of the buttons */
     .buttons {
+        height: calc(75px * var(--button-scaler));
         margin-top: 2em;
         display:flex;
         justify-content:space-between;
@@ -103,7 +116,18 @@ h1 {
         outline-width: 4px;
         outline-color: #521515;
         outline-style: solid;
-        border: 0px;
+        text-decoration: none;
+        transition: ease 450ms;
+    }
+    .button:hover {
+        transition: ease 400ms;
+        --button-scaler: 1.067;
+        transform: scale(var(--button-scaler));
+        filter: saturate(125%) brightness(95%);
+    }
+    .button:focus-visible {
+        background: #ff353580;
+        filter: brightness(175%) saturate(130%);
     }
     /* Creates the disabled button look */
     .button-disabled {
